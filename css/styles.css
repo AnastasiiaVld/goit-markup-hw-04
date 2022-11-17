@@ -8,6 +8,7 @@
     --Second-color:#757575;
     --White-color:#FFFFFF;
     --Color-accent:#2196F3;
+    --Color-grey:#AFB1B8;
 
     --other-color: #F5F4FA;
 }
@@ -128,6 +129,7 @@ img {
 
 .header-contact-container {
     display: flex;
+    justify-content: center;
 }
 
 .header-portfolio-logo{
@@ -144,10 +146,17 @@ img {
     color: var(--Second-color);
     text-decoration: none;
     line-height: 1.17;
+    display: flex;
+    align-items: center;
 }
 
-.header-contact-list-item > a:hover,
-.header-contact-list-item > a:focus {
+.header-mail,.header-tel {
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.header-contact-list-item :hover,
+.header-contact-list-item :focus {
    color: var(--Color-accent);
 }
 
@@ -214,31 +223,14 @@ img {
     padding-bottom: 0;
 }
 
-.main-info-list-item::before {
-    display: block;
-    content: "";
-    height: 120px;
-    background-size: 70px;
-    background-color: #F5F4FA;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 30px;
-}
-
-.icon-antenna::before {
-    background-image: url(../images/antenna.svg);
-}
-
-.icon-clock::before {
-    background-image: url(../images/clock.svg);
-}
-
-.icon-diagram::before {
-    background-image: url(../images/diagram.svg);
-}
-
-.icon-austronaut::before {
-    background-image: url(../images/astronaut.svg);
+.main-info-icon {
+  width: 270px;
+  height: 120px;
+  background-color: #F5F4FA;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 25px 100px;
+  margin-bottom: 30px;
 }
 
 .main-info-list-item-title {
@@ -256,6 +248,34 @@ img {
 
 .section-team {
 background: var(--other-color)
+}
+
+.main-team-social-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #AFB1B8 !important;
+    background-color: var(--White-color);
+}
+
+.social-icon {
+    fill: currentColor;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--Color-accent);
+    color: var(--White-color) !important;
 }
 
 .main-section-title {
@@ -280,6 +300,7 @@ background: var(--other-color)
     border-radius: 0px 0px 4px 4px;
     padding-bottom: 30px;
     background: #FFFFFF
+    
 }
 
 .main-team-list-item-title {
@@ -293,11 +314,41 @@ background: var(--other-color)
     font-size: 16px;
     color: var(--Second-color);
     line-height: 1.19;
+    margin-bottom: 16px;
 }
 
 .main-team-img {
     margin-bottom: 30px;
 }
+
+.clients-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  
+}
+
+.clients-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    color: var(--Color-grey);
+}
+
+.clients-item:hover,
+.clients-item:focus {
+    color: var(--Color-accent);
+}
+
+.clients-icon {
+    fill: currentColor;
+}
+
 
 .footer {
     background-color: #2F303A;
@@ -306,6 +357,10 @@ background: var(--other-color)
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.footer-container {
+    display: flex;
 }
 
 .footer-logo {
@@ -332,8 +387,46 @@ background: var(--other-color)
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    margin-right: 70px;
 }
 
+.footer-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.foter-social-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    width: 116px;
+    margin-bottom: 20px;
+    color: var(--White-color);
+    text-transform: uppercase;
+}
+
+.footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--White-color);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: var(--Color-accent);
+}
+
+.footer-social-icon {
+   fill: var(--White-color);
+}
+    
 .address-contact{
     font-size: 14px;
     color: hsla(0, 0%, 100%, 0.6);
