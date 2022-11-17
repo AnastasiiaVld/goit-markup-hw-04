@@ -343,6 +343,7 @@ background: var(--other-color)
 .clients-item:hover,
 .clients-item:focus {
     color: var(--Color-accent);
+    border-color: var(--Color-accent);
 }
 
 .clients-icon {
